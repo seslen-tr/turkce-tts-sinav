@@ -11,6 +11,7 @@ Bölümler (veri/):
   vurgu_vikisozluk.tsv  9.030 Vikisözlük sözcüğü; "kesin" (son hece dışı, editör yazmış) ve
                         "yumusak" (son hece; şablon varsayılanı olabilir) ayrımıyla
   okunus_vikisozluk.tsv 11.108 Vikisözlük sözcüğünün sesbirimsel IPA'sı
+  normalizasyon.tsv     128 metin hazırlama örneği (sayı, tarih, saat, para, kısaltma, Roma rakamı…)
 Hece: Türkçe yazım hecesi (her ünlü bir hece; iki ünlü arasındaki tek ünsüz sonraki heceye,
 birden çoksa sonuncusu). Vurgulu hece 0'dan sayılır; vurgusuz sözcük (mi, de) için None.
 """
@@ -136,4 +137,26 @@ def okunus_sinavi(sistem: Callable[[str], str], yaz: bool = True) -> dict:
         print("OKUNUŞ")
         print(f"  tam eşleşme %{100 * sonuc['tam']:.1f} · PER %{100 * sonuc['per']:.2f} · "
               f"incelik-duyarsız PER %{100 * sonuc['per_incelik_duyarsiz']:.2f}  ({n} sözcük)")
+    return sonuc
+
+
+def normalizasyon_sinavi(sistem: Callable[[str], str], yaz: bool = True) -> dict:
+    """sistem(metin) → okunuşa hazır metin. Ölçü: tam eşleşme (boşluk farkı yok sayılır) ve
+    sözcük hata oranı (WER)."""
+    tam = hata = top = 0
+    yanlis = []
+    for girdi, beklenen, grup in _satirlar("normalizasyon.tsv"):
+        cikti = " ".join(sistem(girdi).split())
+        a, b = cikti.split(), beklenen.split()
+        h = _uzaklik(a, b)
+        hata += h
+        top += len(b)
+        tam += h == 0
+        if h:
+            yanlis.append((girdi, cikti, beklenen))
+    n = len(_satirlar("normalizasyon.tsv"))
+    sonuc = {"tam": tam / n, "wer": hata / top, "ornek": n, "yanlislar": yanlis}
+    if yaz:
+        print("METİN HAZIRLAMA")
+        print(f"  tam eşleşme {tam} / {n}  %{100 * tam / n:.1f} · WER %{100 * hata / top:.2f}")
     return sonuc

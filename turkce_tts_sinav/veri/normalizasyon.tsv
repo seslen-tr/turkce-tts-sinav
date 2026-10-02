@@ -1,0 +1,130 @@
+# Türkçe metin hazırlama (TTS normalizasyonu) sınavı — girdi<TAB>beklenen okunuş<TAB>grup
+# Kaynak: turkce-normalize testleri (Seslen ile birebir uyum testleri + yeni kurallar). MIT.
+Fatura tutarınız 1.250,50 ₺ olarak hesaplandı.	Fatura tutarınız bin iki yüz elli lira elli kuruş olarak hesaplandı.	TemelNormalizasyon
+Sözleşme 15.03.2026 tarihinde yenilenecek.	Sözleşme on beş mart iki bin yirmi altı tarihinde yenilenecek.	TemelNormalizasyon
+Bu ürüne %18 KDV uygulanır.	Bu ürüne yüzde on sekiz katma değer vergisi uygulanır.	TemelNormalizasyon
+Toplantı 14:30'da başlıyor.	Toplantı on dört otuzda başlıyor.	TemelNormalizasyon
+Lütfen 3. maddeyi okuyun.	Lütfen üçüncü maddeyi okuyun.	TemelNormalizasyon
+Ankara'da 2. şube 08:45'te açılıyor.	Ankarada ikinci şube sekiz kırk beşte açılıyor.	TemelNormalizasyon
+Sn. Dr. Ayşe Yılmaz aradı.	sayın doktor Ayşe Yılmaz aradı.	TemelNormalizasyon
+Mesafe 12 km, alan 85 m² olarak ölçüldü.	Mesafe on iki kilometre, alan seksen beş metrekare olarak ölçüldü.	TemelNormalizasyon
+Destek için 0212 555 44 33 numarasını arayın.	Destek için sıfır iki bir iki beş beş beş dört dört üç üç numarasını arayın.	TemelNormalizasyon
+Randevu 10:01'de.	Randevu on sıfır birde.	TemelNormalizasyon
+Toplantı 14:05 başlıyor.	Toplantı on dört sıfır beş başlıyor.	TemelNormalizasyon
+Saat 08:07.	Saat sekiz sıfır yedi.	TemelNormalizasyon
+Mesai 09:00'da başlar.	Mesai dokuzda başlar.	TemelNormalizasyon
+14:30'da görüşürüz.	on dört otuzda görüşürüz.	TemelNormalizasyon
+Gece 00:15 kayıt alındı.	Gece sıfır sıfır on beş kayıt alındı.	TemelNormalizasyon
+WMS katmanını buffer ile analiz et.	ve me se katmanını bafır ile analiz et.	Telaffuz
+Shapefile dosyasını GeoJSON olarak dışa aktar.	şeypfayl dosyasını ceo ceyson olarak dışa aktar.	Telaffuz
+Koordinat sistemi WGS84.	Koordinat sistemi ve ge es seksen dört.	Telaffuz
+KENTGIS açılıyor.	KENTGIS açılıyor.	Telaffuz
+Merkez 39.9334, 32.8597 noktasında.	Merkez enlem otuz dokuz virgül dokuz üç üç dört, boylam otuz iki virgül sekiz beş dokuz yedi noktasında.	Cografi
+Sınır 39°56'12"K noktasından geçiyor.	Sınır otuz dokuz derece elli altı dakika on iki saniye kuzey noktasından geçiyor.	Cografi
+Konum 32°51'D.	Konum otuz iki derece elli bir dakika doğu.	Cografi
+Enlem 39.9334° K	Enlem otuz dokuz virgül dokuz üç üç dört derece kuzey	Cografi
+1/25.000 ölçekli pafta	yirmi beş binde bir ölçekli pafta	Cografi
+1:1000 ölçekli	binde bir ölçekli	Cografi
+Pafta G22-b-14c-2d	Pafta ge yirmi iki be on dört ce iki de	Cografi
+Koordinat sistemi EPSG:5254	Koordinat sistemi e pe es ge beş iki beş dört	Cografi
+Toplam 340 ha alan.	Toplam üç yüz kırk hektar alan.	Cografi
+Parsel 12 da büyüklüğünde.	Parsel on iki dekar büyüklüğünde.	Cografi
+XX. yüzyıl	yirminci yüzyıl	RomaRakamlari
+XIX. yüzyılda yaşadı.	on dokuzuncu yüzyılda yaşadı.	RomaRakamlari
+II. Abdülhamit	ikinci Abdülhamit	RomaRakamlari
+III. Selim tahta çıktı.	üçüncü Selim tahta çıktı.	RomaRakamlari
+I. Dünya Savaşı	birinci Dünya Savaşı	RomaRakamlari
+Sultan V. Mehmet	Sultan beşinci Mehmet	RomaRakamlari
+GELDİ MI. Evet.	GELDİ MI. Evet.	RomaRakamlari
+Bu bir CD. Sonra bakarız.	Bu bir ce de. Sonra bakarız.	RomaRakamlari
+Mehmet V. Delibaş geldi.	Mehmet V. Delibaş geldi.	RomaRakamlari
+Bölüm IIII. kısım	Bölüm IIII. kısım	RomaRakamlari
+Not: MD. Ahmet	Not: me de. Ahmet	RomaRakamlari
+1/2 kilo un	yarım kilo un	Kesirler
+1/4 saat	çeyrek saat	Kesirler
+3/4 oranında	dörtte üç oranında	Kesirler
+2/3 çoğunluk	üçte iki çoğunluk	Kesirler
+1/5	beşte bir	Kesirler
+1/6	altıda bir	Kesirler
+1/10	onda bir	Kesirler
+3/40	kırkta üç	Kesirler
+7/8	sekizde yedi	Kesirler
+1/9	dokuzda bir	Kesirler
+1/100	yüzde bir	Kesirler
+1/1000	binde bir	Kesirler
+2 1/2 kilo	iki buçuk kilo	Kesirler
+3 3/4 metre	üç tam dörtte üç metre	Kesirler
+½ ekmek, 2½ saat	yarım ekmek, iki buçuk saat	Kesirler
+Bütçenin 3/4'ü harcandı.	Bütçenin dörtte üçü harcandı.	Kesirler
+15/03/2026	on beş mart iki bin yirmi altı	Kesirler
+1/25.000 ölçekli	yirmi beş binde bir ölçekli	Kesirler
+No: 5/7	No: beş bölü yedi	Kesirler
+15/03 tarihinde	on beş/üç tarihinde	Kesirler
+3-5 kişi geldi.	üç beş kişi geldi.	Araliklar
+10–20 dakika	on yirmi dakika	Araliklar
+2020-2025 yılları arasında	iki bin yirmi ile iki bin yirmi beş yılları arasında	Araliklar
+1.000-2.000 TL	bin ile iki bin lira	Araliklar
+3-5. maddeler	üçüncü ile beşinci maddeler	Araliklar
+%10-20 indirim	yüzde on ile yirmi indirim	Araliklar
+14:30-15:30 arası	on dört otuz ile on beş otuz arası	Araliklar
+01.03.2026-05.03.2026	bir mart iki bin yirmi altı ile beş mart iki bin yirmi altı	Araliklar
+-5 derece	eksi beş derece	Araliklar
+Sıcaklık -12,5 oldu.	Sıcaklık eksi on iki virgül beş oldu.	Araliklar
+0212-555-44-33	sıfır iki bir iki beş beş beş dört dört üç üç	Araliklar
+Skor 3-1 bitti.	Skor üç bir bitti.	Araliklar
+TBMM toplandı.	te be me me toplandı.	Kisaltmalar
+TRT haberleri	te re te haberleri	Kisaltmalar
+AKP ve CHP	a ka pe ve ce he pe	Kisaltmalar
+ÖSYM sınavı	ö se ye me sınavı	Kisaltmalar
+ĞÜŞ	yumuşak ge ü şe	Kisaltmalar
+WWF ve XQ	çift ve çift ve fe ve iks kü	Kisaltmalar
+TBMM'de oylama	te be me mede oylama	Kisaltmalar
+ABD'li yetkili	a be deli yetkili	Kisaltmalar
+TBMM'DE	te be me mede	Kisaltmalar
+NATO'ya katıldı.	natoya katıldı.	Kisaltmalar
+ASELSAN ve TÜBİTAK	aselsan ve tübitak	Kisaltmalar
+AFAD, TOKİ, ODTÜ	afad, toki, odtü	Kisaltmalar
+%18 KDV	yüzde on sekiz katma değer vergisi	Kisaltmalar
+100 TL	yüz lira	Kisaltmalar
+UYARI: kapı açık	UYARI: kapı açık	Kisaltmalar
+GELDİ MI?	GELDİ MI?	Kisaltmalar
+ANKARA büyükşehir	ANKARA büyükşehir	Kisaltmalar
+Henry VIII	Henry VIII	Kisaltmalar
+APIyi çağır	APIyi çağır	Kisaltmalar
+ali.veli@ornek.com.tr	ali nokta veli et ornek nokta com nokta te re	EpostaVeAdres
+Yazın: destek_2@site.org.	Yazın: destek alt çizgi iki et site nokta org.	EpostaVeAdres
+https://www.ornek.gov.tr/harita	ornek nokta gov nokta te re bölü harita	EpostaVeAdres
+Bkz. http://site.com/a/b-c?x=1&y=2.	Bkz. site nokta com bölü a bölü b tire c.	EpostaVeAdres
+Detay için ornek.com.tr adresine bakın.	Detay için ornek nokta com nokta te re adresine bakın.	EpostaVeAdres
+api.ornek.com	ey pi ay nokta ornek nokta com	EpostaVeAdres
+https://ornek.com/rapor.pdf	ornek nokta com bölü rapor nokta pe de fe	EpostaVeAdres
+vb. şeyler	ve benzeri şeyler	EpostaVeAdres
+ABC A.Ş. merkezi	a be ce anonim şirketi merkezi	EpostaVeAdres
+Oraya gittim.De ki	Oraya gittim.De ki	EpostaVeAdres
+2+2=4	iki artı iki eşittir dört	Simgeler
+3 + 5 = 8	üç artı beş eşittir sekiz	Simgeler
+Ar-Ge & Pazarlama	Ar-Ge ve Pazarlama	Simgeler
+Hava 25°C, gece -3 °C.	Hava yirmi beş derece, gece eksi üç derece.	Simgeler
+Ateş 38,5°C'ye çıktı.	Ateş otuz sekiz virgül beş dereceye çıktı.	Simgeler
+45° açı	kırk beş derece açı	Simgeler
+±0,5 mm	artı eksi sıfır virgül beş milimetre	Simgeler
+3,05 metre	üç virgül sıfır beş metre	Iyilestirmeler
+1:1.000.000 ölçek	bir milyonda bir ölçek	Iyilestirmeler
+-12.3456, 45.6789	enlem eksi on iki virgül üç dört beş altı, boylam kırk beş virgül altı yedi sekiz dokuz	Iyilestirmeler
+UTM 35 dilimi	u te me otuz beşinci dilimi	Iyilestirmeler
+UTM 35N	u te me otuz beşinci dilim kuzey	Iyilestirmeler
+PKK ve TDK	pe ka ka ve te de ka	Eklenenler
+Pastanın 1/2'si, 1/4'ü ve 3/4'ü kaldı.	Pastanın yarısı, çeyreği ve dörtte üçü kaldı.	Eklenenler
+1/2'sini aldım	yarısını aldım	Eklenenler
+3.5 milyon	üç virgül beş milyon	Eklenenler
+3.500 lira	üç bin beş yüz lira	Eklenenler
+Saat 14.30'da	Saat on dört otuzda	Eklenenler
+pi 3.14	pi üç virgül on dört	Eklenenler
+1.2.3 sürümü	bir nokta iki nokta üç sürümü	Eklenenler
+1.250.000 kişi	bir milyon iki yüz elli bin kişi	Eklenenler
+24/7 açık	yirmi dört yedi açık	Eklenenler
+Maç 3-1 bitti.	Maç üç bir bitti.	Eklenenler
+2026-10-03	üç ekim iki bin yirmi altı	Eklenenler
+03-10-2026	üç ekim iki bin yirmi altı	Eklenenler
+KDV %18.	katma değer vergisi yüzde on sekiz.	Eklenenler
+%1.250 arttı	yüzde bin iki yüz elli arttı	Eklenenler

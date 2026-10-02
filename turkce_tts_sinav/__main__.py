@@ -2,7 +2,7 @@
 """python -m turkce_tts_sinav [turkce-vurgu | son-hece | espeak] — hazır sistemleri sınavdan geçirir."""
 import sys
 
-from . import heceler, ipa_vurgu_hecesi, kucuk, okunus_sinavi, vurgu_sinavi
+from . import heceler, ipa_vurgu_hecesi, kucuk, normalizasyon_sinavi, okunus_sinavi, vurgu_sinavi
 
 
 def turkce_vurgu():
@@ -10,6 +10,11 @@ def turkce_vurgu():
     from turkce_vurgu.vurgu import vurgulu_hece
     vurgu_sinavi(lambda w, ozel: vurgulu_hece(kucuk(w), ozel))
     okunus_sinavi(lambda w: sozcuk_okunusu(w))
+
+
+def turkce_normalize():
+    from turkce_normalize import normalize
+    normalizasyon_sinavi(normalize)
 
 
 def son_hece():
@@ -24,7 +29,8 @@ def espeak():
     okunus_sinavi(ipa)
 
 
-SISTEMLER = {"turkce-vurgu": turkce_vurgu, "son-hece": son_hece, "espeak": espeak}
+SISTEMLER = {"turkce-vurgu": turkce_vurgu, "turkce-normalize": turkce_normalize, "son-hece": son_hece,
+             "espeak": espeak}
 
 if __name__ == "__main__":
     for ad in sys.argv[1:] or ["turkce-vurgu", "son-hece"]:
