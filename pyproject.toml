@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turkce-tts-sinav"
+version = "0.1.0"
+description = "Türkçe G2P, sözcük vurgusu ve ses sentezi ön uçları için açık sınav verisi ve değerlendirici"
+readme = "README.md"
+license = { text = "MIT (kod), CC BY-SA 4.0 (veri)" }
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools]
+packages = ["turkce_tts_sinav"]
+
+[tool.setuptools.package-data]
+turkce_tts_sinav = ["veri/*.tsv"]
