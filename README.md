@@ -25,7 +25,7 @@ python -m turkce_tts_sinav turkce-vurgu turkce-normalize son-hece espeak
 | `vurgu_literatur.tsv` | Dilbilim literatüründe vurgusu verilmiş 135 sözcük ve çekimli biçim, her biri kaynağıyla. Tür etiketi: ek/kök kuralı, Sezer kuralı, sözlüksel, bağlamsız çözülemez | Inkelas & Orgun 2003; Inkelas 1999; Göksel & Kerslake 2005; Sezer 1981; Woodard 2015; Yawney 2018 |
 | `vurgu_vikisozluk.tsv` | 9.030 sözcüğün vurgulu hecesi, **kesin / yumuşak** ayrımıyla | Vikisözlük (kaikki.org), CC BY-SA 4.0 |
 | `okunus_vikisozluk.tsv` | 11.108 sözcüğün sesbirimsel IPA'sı | Vikisözlük (kaikki.org), CC BY-SA 4.0 |
-| `normalizasyon.tsv` | 128 metin hazırlama örneği: sayı, tarih, saat, para, IBAN, telefon, kısaltma, Roma rakamı, kesir, aralık, e-posta, koordinat | [turkce-normalize](../turkce-normalize) testleri, MIT |
+| `normalizasyon.tsv` | 128 metin hazırlama örneği: sayı, tarih, saat, para, IBAN, telefon, kısaltma, Roma rakamı, kesir, aralık, e-posta, koordinat | [turkce-normalize](https://github.com/seslen-tr/turkce-normalize) testleri, MIT |
 
 **Kesin ve yumuşak.** Vikisözlük'ün Türkçe okunuş şablonu, vurgu belirtilmezse son heceyi
 kendiliğinden işaretler. Bu yüzden:
@@ -49,10 +49,10 @@ kendiliğinden işaretler. Bu yüzden:
 
 | Sistem | Literatür kural+Sezer | Vikisözlük kesin | Vikisözlük yumuşak | Okunuş PER |
 |---|---|---|---|---|
-| [turkce-vurgu](../turkce-vurgu) 0.1 | 120/123 (%97,6) | %97,2 ⚠ | %91,7 | %3,04 ⚠ |
+| [turkce-vurgu](https://github.com/seslen-tr/turkce-vurgu) 0.1 | 120/123 (%97,6) | %97,2 ⚠ | %91,7 | %3,04 ⚠ |
 | hep son hece | 21/123 (%17,1) | %0 | %100 | — |
 
-**Metin hazırlama:** [turkce-normalize](../turkce-normalize) 0.1 → 128/128. ⚠ Örnekler onun
+**Metin hazırlama:** [turkce-normalize](https://github.com/seslen-tr/turkce-normalize) 0.1 → 128/128. ⚠ Örnekler onun
 testlerinden derlendiği için bu bağımsız bir ölçüm değildir; başka sistemlerin
 karşılaştırılması için konmuştur. Bağımsız örnek katkıları bu yüzden özellikle değerlidir.
 
