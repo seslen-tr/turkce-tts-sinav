@@ -1,5 +1,7 @@
 # turkce-tts-sinav
 
+> **English:** Open test data and evaluator for Turkish G2P, lexical stress and TTS text normalization: 135 stress examples from the linguistic literature, ~9,000 Wiktionary stress entries, ~11,000 Wiktionary IPA transcriptions and 128 normalization cases, with ready-made scorers.
+
 Türkçe G2P, sözcük vurgusu ve ses sentezi ön uçlarını ölçmek için **açık sınav verisi ve
 değerlendirici**. Türkçe için bugüne kadar böyle ortak bir ölçüt yoktu. Sistemler ya hiç
 ölçülmüyor ya da herkes kendi örnekleriyle ölçüyordu.
