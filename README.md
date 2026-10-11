@@ -1,6 +1,6 @@
 # turkce-tts-sinav
 
-> **English:** Open test data and evaluator for Turkish G2P, lexical stress and TTS text normalization: 135 stress examples from the linguistic literature, ~9,000 Wiktionary stress entries, ~11,000 Wiktionary IPA transcriptions and 128 normalization cases, with ready-made scorers.
+> **English:** Open test data and evaluator for Turkish G2P, lexical stress and TTS text normalization: 174 stress examples from the linguistic literature, ~9,000 Wiktionary stress entries, ~11,000 Wiktionary IPA transcriptions and 128 normalization cases, with ready-made scorers.
 
 Türkçe G2P, sözcük vurgusu ve ses sentezi ön uçlarını ölçmek için **açık sınav verisi ve
 değerlendirici**. Türkçe için bugüne kadar böyle ortak bir ölçüt yoktu. Sistemler ya hiç
@@ -18,14 +18,39 @@ normalizasyon_sinavi(lambda metin: benim_sistemim.normalize(metin))         # ok
 python -m turkce_tts_sinav turkce-vurgu turkce-normalize son-hece espeak
 ```
 
+## Kurulum
+
+```
+pip install turkce-tts-sinav                      # bağımlılığı yok, Python 3.9+
+pip install turkce-vurgu turkce-normalize         # hazır sistemleri komut satırından ölçmek için
+```
+
+Komut satırı sistem adı verilmezse `turkce-vurgu` ve `son-hece` (hep son hece, taban çizgisi) ölçülür.
+`espeak` için `pip install phonemizer` ve sistemde espeak-ng gerekir.
+
+## Değerlendiriciler
+
+| İşlev | Sistemden beklenen | Döndürdüğü |
+|---|---|---|
+| `vurgu_sinavi(sistem)` | `sistem(sozcuk, ozel_kok)` → vurgulu hecenin 0'dan sırası, vurgusuz sözcükte `None` | `literatur` (türe göre doğru/toplam), `vikisozluk_kesin`, `vikisozluk_yumusak`, `yanlislar` |
+| `okunus_sinavi(sistem)` | `sistem(sozcuk)` → IPA (vurgu işareti yok sayılır) | `tam`, `per`, `per_incelik_duyarsiz`, `sozcuk` |
+| `normalizasyon_sinavi(sistem)` | `sistem(metin)` → okunuşa hazır metin | `tam`, `wer`, `ornek`, `yanlislar` |
+
+Hepsi `yaz=False` ile sessiz çalışır. Hece, Türkçe yazım hecesidir (`heceler()`); IPA çıktısı veren
+sistemler `ipa_vurgu_hecesi(ipa)` ile vurgu sınavına bağlanır. Vikisözlük'te özel ad olan sözcük
+sisteme büyük harfle başlayarak, küçük harfli hâli de `ozel_kok` olarak verilir; literatür
+örneklerinde `ozel_kok` kaynaktaki özel ad köküdür (yoksa boş).
+
 ## Veri
 
 | Dosya | İçerik | Kaynak |
 |---|---|---|
-| `vurgu_literatur.tsv` | Dilbilim literatüründe vurgusu verilmiş 135 sözcük ve çekimli biçim, her biri kaynağıyla. Tür etiketi: ek/kök kuralı, Sezer kuralı, sözlüksel, bağlamsız çözülemez | Inkelas & Orgun 2003; Inkelas 1999; Göksel & Kerslake 2005; Sezer 1981; Woodard 2015; Yawney 2018 |
+| `vurgu_literatur.tsv` | Dilbilim literatüründe vurgusu verilmiş 174 sözcük ve çekimli biçim, her biri kaynağıyla. Tür etiketi: ek/kök kuralı (90), Sezer kuralı (33), sözlüksel (43), bağlamsız çözülemez (8) | Inkelas & Orgun 2003; Inkelas 1999; Göksel & Kerslake 2005; Sezer 1981; Woodard 2015; Yawney 2018 |
 | `vurgu_vikisozluk.tsv` | 9.030 sözcüğün vurgulu hecesi, **kesin / yumuşak** ayrımıyla | Vikisözlük (kaikki.org), CC BY-SA 4.0 |
 | `okunus_vikisozluk.tsv` | 11.108 sözcüğün sesbirimsel IPA'sı | Vikisözlük (kaikki.org), CC BY-SA 4.0 |
 | `normalizasyon.tsv` | 128 metin hazırlama örneği: sayı, tarih, saat, para, IBAN, telefon, kısaltma, Roma rakamı, kesir, aralık, e-posta, koordinat | [turkce-normalize](https://github.com/seslen-tr/turkce-normalize) testleri, MIT |
+
+Dosyalar paketle birlikte `turkce_tts_sinav/veri/` altında gelir.
 
 **Kesin ve yumuşak.** Vikisözlük'ün Türkçe okunuş şablonu, vurgu belirtilmezse son heceyi
 kendiliğinden işaretler. Bu yüzden:
@@ -64,6 +89,20 @@ espeak-ng'yi ölçmek için `pip install phonemizer` ve sistemde espeak-ng gerek
 çalışma, espeak-ng'nin Vikisözlük'le yalnız %55 oranında aynı hecede vurgu yaptığını bildiriyor
 ([Ghostwriter-Dict](https://github.com/Prosincerity/Ghostwriter-Dict)).
 
+## Testler
+
+```
+python -m unittest discover -s tests     # ya da: pytest -q (CI'daki gibi, Python 3.9 ve 3.12)
+```
+
+## Kardeş projeler
+
+Ölçülen sistemler [turkce-vurgu](https://github.com/seslen-tr/turkce-vurgu) ve
+[turkce-normalize](https://github.com/seslen-tr/turkce-normalize),
+[seslen-tts](https://github.com/seslen-tr/seslen-tts) ses modelinin metin ön ucudur. Diğerleri:
+[turkce-duygu](https://github.com/seslen-tr/turkce-duygu) · [turkce-uslup](https://github.com/seslen-tr/turkce-uslup) ·
+[turkce-plbert](https://github.com/seslen-tr/turkce-plbert)
+
 ## Katkı
 
 Yeni kaynaklı örnek, düzeltme ya da sistem sonucu eklemek için PR açılabilir. Literatür
@@ -71,5 +110,5 @@ Yeni kaynaklı örnek, düzeltme ya da sistem sonucu eklemek için PR açılabil
 
 ## Lisans
 
-Kod MIT ([LICENSE](LICENSE)). `veri/` altındaki Vikisözlük türevi dosyalar CC BY-SA 4.0.
+Kod MIT ([LICENSE](LICENSE)). `turkce_tts_sinav/veri/` altındaki Vikisözlük türevi dosyalar CC BY-SA 4.0.
 Literatür örnekleri kaynaklarına atıfla kısa alıntıdır.
