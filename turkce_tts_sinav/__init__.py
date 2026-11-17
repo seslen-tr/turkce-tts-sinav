@@ -11,7 +11,7 @@ Bölümler (veri/):
   vurgu_vikisozluk.tsv  9.030 Vikisözlük sözcüğü; "kesin" (son hece dışı, editör yazmış) ve
                         "yumusak" (son hece; şablon varsayılanı olabilir) ayrımıyla
   okunus_vikisozluk.tsv 11.108 Vikisözlük sözcüğünün sesbirimsel IPA'sı
-  normalizasyon.tsv     128 metin hazırlama örneği (sayı, tarih, saat, para, kısaltma, Roma rakamı…)
+  normalizasyon.tsv     145 metin hazırlama örneği (sayı, tarih, saat, para, kısaltma, Roma rakamı…)
 Hece: Türkçe yazım hecesi (her ünlü bir hece; iki ünlü arasındaki tek ünsüz sonraki heceye,
 birden çoksa sonuncusu). Vurgulu hece 0'dan sayılır; vurgusuz sözcük (mi, de) için None.
 """
