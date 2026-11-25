@@ -1,5 +1,6 @@
-# Türkçe metin hazırlama (TTS normalizasyonu) sınavı — girdi<TAB>beklenen okunuş<TAB>grup
+# Türkçe metin hazırlama (TTS normalizasyonu) sınavı — girdi<TAB>beklenen okunuş<TAB>grup[<TAB>kaynak]
 # Kaynak: turkce-normalize testleri (Seslen ile birebir uyum testleri + yeni kurallar). MIT.
+# Birden çok doğru okunuş ' | ' ile ayrılır, en yakını sayılır. Kaynak sütunu boşsa turkce-normalize-testleri.
 Fatura tutarınız 1.250,50 ₺ olarak hesaplandı.	Fatura tutarınız bin iki yüz elli lira elli kuruş olarak hesaplandı.	TemelNormalizasyon
 Sözleşme 15.03.2026 tarihinde yenilenecek.	Sözleşme on beş mart iki bin yirmi altı tarihinde yenilenecek.	TemelNormalizasyon
 Bu ürüne %18 KDV uygulanır.	Bu ürüne yüzde on sekiz katma değer vergisi uygulanır.	TemelNormalizasyon

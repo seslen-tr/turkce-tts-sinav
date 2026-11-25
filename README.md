@@ -34,7 +34,7 @@ Komut satırı sistem adı verilmezse `turkce-vurgu` ve `son-hece` (hep son hece
 |---|---|---|
 | `vurgu_sinavi(sistem)` | `sistem(sozcuk, ozel_kok)` → vurgulu hecenin 0'dan sırası, vurgusuz sözcükte `None` | `literatur` (türe göre doğru/toplam), `vikisozluk_kesin`, `vikisozluk_yumusak`, `yanlislar` |
 | `okunus_sinavi(sistem)` | `sistem(sozcuk)` → IPA (vurgu işareti yok sayılır) | `tam`, `per`, `per_incelik_duyarsiz`, `sozcuk` |
-| `normalizasyon_sinavi(sistem)` | `sistem(metin)` → okunuşa hazır metin | `tam`, `wer`, `ornek`, `yanlislar` |
+| `normalizasyon_sinavi(sistem, gevsek=False)` | `sistem(metin)` → okunuşa hazır metin | `tam`, `wer`, `ornek`, `yanlislar`, `kaynaklar` (kaynağa göre doğru / toplam) |
 
 Hepsi `yaz=False` ile sessiz çalışır. Hece, Türkçe yazım hecesidir (`heceler()`); IPA çıktısı veren
 sistemler `ipa_vurgu_hecesi(ipa)` ile vurgu sınavına bağlanır. Vikisözlük'te özel ad olan sözcük
@@ -68,7 +68,7 @@ kendiliğinden işaretler. Bu yüzden:
 | Vurgu, literatür | doğru / toplam, türe göre; asıl ölçü "kural + Sezer" (bağlamsız çözülemeyen örnekler hariç) |
 | Vurgu, Vikisözlük | kesin ve yumuşak alt kümelerde doğruluk |
 | Okunuş | tam eşleşme oranı, PER (ses hata oranı; düzenleme uzaklığı / ses sayısı), incelik-duyarsız PER |
-| Metin hazırlama | tam eşleşme oranı, WER (sözcük hata oranı) |
+| Metin hazırlama | tam eşleşme oranı, WER (sözcük hata oranı); toplam ve kaynağa göre. Birden çok doğru okunuş `" \| "` ile ayrılır, en yakını sayılır. `gevsek=True` büyük-küçük harf, noktalama ve kesmeyi yok sayar |
 
 ## Sonuçlar
 

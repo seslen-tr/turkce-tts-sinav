@@ -1,5 +1,12 @@
 # Değişiklikler
 
+## Yayımlanmamış
+
+- `normalizasyon.tsv`'ye isteğe bağlı dördüncü sütun: kaynak. Boşsa `turkce-normalize-testleri`; eski üç sütunlu
+  satırlar olduğu gibi çalışır. Sonuç toplamın yanında kaynağa göre de verilir (`kaynaklar`).
+- Beklenen sütununda birden çok doğru okunuş (`" | "` ile); en yakını sayılır. Mevcut veride değişiklik yok.
+- `normalizasyon_sinavi(..., gevsek=True)`: büyük-küçük harf, noktalama ve kesme yok sayılır ("Beş'te." = "beşte").
+
 ## 0.1.2 — metin hazırlama verisi güncel
 
 - 20 beklenen okunuş turkce-normalize 0.1.4–0.1.7'nin bilinçli değişikliklerine göre güncellendi: harf harf okunan
