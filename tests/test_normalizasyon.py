@@ -44,6 +44,8 @@ class Normalizasyon(unittest.TestCase):
         self.assertEqual(s["tam"], 1.0)
         self.assertEqual(s["ornek"], sum(k["ornek"] for k in s["kaynaklar"].values()))
         self.assertIn(VARSAYILAN_KAYNAK, s["kaynaklar"])
+        self.assertIn("bagimsiz-dorukdumlu", s["kaynaklar"])
+        self.assertTrue(any(OKUNUS_AYIRICI in p[1] for p in _satirlar("normalizasyon.tsv")))
 
 
 if __name__ == "__main__":

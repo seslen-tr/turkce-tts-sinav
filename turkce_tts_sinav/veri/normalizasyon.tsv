@@ -146,3 +146,73 @@ Katılımcıların %5'i geldi.	Katılımcıların yüzde beşi geldi.	Yeni
 Yarışmada 3'üncü oldu.	Yarışmada üçüncü oldu.	Yeni
 Mesai 09:00-17:00 arası.	Mesai dokuz ile on yedi arası.	Yeni
 Sıcaklık 3,5'e düştü.	Sıcaklık üç virgül beşe düştü.	Yeni
+# Kaynak: bagimsiz-dorukdumlu — tr-tts-norm-bench (https://github.com/dorukdumlu/tr-tts-norm-bench),
+# Doruk Dumlu. Banka ve sigorta müşterisine söylenen cümleler; hiçbir normalizer'ın testlerinden derlenmedi.
+# Okunuşlar bir çağrı merkezi temsilcisinin söyleyeceği biçimdedir. MIT.
+Doğum tarihiniz 14.03.1988 mi?	Doğum tarihiniz on dört mart bin dokuz yüz seksen sekiz mi?	date	bagimsiz-dorukdumlu
+Randevunuz 21.11.2026 tarihinde.	Randevunuz yirmi bir kasım iki bin yirmi altı tarihinde.	date	bagimsiz-dorukdumlu
+Poliçeniz 01.01.2027'de sona eriyor.	Poliçeniz bir ocak iki bin yirmi yedide sona eriyor.	date	bagimsiz-dorukdumlu
+Son ödeme tarihi 05/12/2026.	Son ödeme tarihi beş aralık iki bin yirmi altı.	date	bagimsiz-dorukdumlu
+Kartınız 30.06.2025 tarihinde teslim edildi.	Kartınız otuz haziran iki bin yirmi beş tarihinde teslim edildi.	date	bagimsiz-dorukdumlu
+Teslimat 19.05.2026 günü yapılacak.	Teslimat on dokuz mayıs iki bin yirmi altı günü yapılacak.	date	bagimsiz-dorukdumlu
+Başvurunuz 2026-11-14 tarihinde alındı.	Başvurunuz on dört kasım iki bin yirmi altı tarihinde alındı.	date	bagimsiz-dorukdumlu
+Sözleşmeniz 28.02.2026 itibarıyla yenilendi.	Sözleşmeniz yirmi sekiz şubat iki bin yirmi altı itibarıyla yenilendi.	date	bagimsiz-dorukdumlu
+Kartınızın son dört hanesi 0042.	Kartınızın son dört hanesi sıfır sıfır dört iki. | Kartınızın son dört hanesi sıfır sıfır kırk iki.	zeros	bagimsiz-dorukdumlu
+Doğrulama kodunuz 0718.	Doğrulama kodunuz sıfır yedi bir sekiz. | Doğrulama kodunuz sıfır yedi on sekiz.	zeros	bagimsiz-dorukdumlu
+Dahili numaramız 007.	Dahili numaramız sıfır sıfır yedi.	zeros	bagimsiz-dorukdumlu
+Şube kodunuz 0312 olarak görünüyor.	Şube kodunuz sıfır üç bir iki olarak görünüyor. | Şube kodunuz sıfır üç yüz on iki olarak görünüyor. | Şube kodunuz sıfır üç on iki olarak görünüyor.	zeros	bagimsiz-dorukdumlu
+Kimlik numaranızın son üç hanesi 046.	Kimlik numaranızın son üç hanesi sıfır dört altı. | Kimlik numaranızın son üç hanesi sıfır kırk altı.	zeros	bagimsiz-dorukdumlu
+Tek kullanımlık şifreniz 0905.	Tek kullanımlık şifreniz sıfır dokuz sıfır beş.	zeros	bagimsiz-dorukdumlu
+Bizi 0850 222 23 35 numarasından arayabilirsiniz.	Bizi sıfır sekiz yüz elli, iki yüz yirmi iki, yirmi üç, otuz beş numarasından arayabilirsiniz. | Bizi sıfır sekiz beş sıfır, iki iki iki, iki üç, üç beş numarasından arayabilirsiniz.	phone	bagimsiz-dorukdumlu
+Kayıtlı numaranız 0532 000 00 01 mi?	Kayıtlı numaranız sıfır beş yüz otuz iki, sıfır sıfır sıfır, sıfır sıfır, sıfır bir mi? | Kayıtlı numaranız sıfır beş üç iki, sıfır sıfır sıfır, sıfır sıfır, sıfır bir mi?	phone	bagimsiz-dorukdumlu
+Sizi +90 532 123 45 67 numarasından arayacağız.	Sizi artı doksan, beş yüz otuz iki, yüz yirmi üç, kırk beş, altmış yedi numarasından arayacağız. | Sizi doksan, beş yüz otuz iki, yüz yirmi üç, kırk beş, altmış yedi numarasından arayacağız. | Sizi artı dokuz sıfır, beş üç iki, bir iki üç, dört beş, altı yedi numarasından arayacağız.	phone	bagimsiz-dorukdumlu
+Hasar hattımız 0(212) 555 12 34.	Hasar hattımız sıfır iki yüz on iki, beş yüz elli beş, on iki, otuz dört. | Hasar hattımız sıfır iki bir iki, beş beş beş, bir iki, üç dört.	phone	bagimsiz-dorukdumlu
+Numaranız 05321234567 olarak kayıtlı.	Numaranız sıfır beş üç iki bir iki üç dört beş altı yedi olarak kayıtlı. | Numaranız sıfır beş yüz otuz iki, yüz yirmi üç, kırk beş, altmış yedi olarak kayıtlı.	phone	bagimsiz-dorukdumlu
+Destek hattımız 0850-222-23-35.	Destek hattımız sıfır sekiz yüz elli, iki yüz yirmi iki, yirmi üç, otuz beş. | Destek hattımız sıfır sekiz beş sıfır, iki iki iki, iki üç, üç beş.	phone	bagimsiz-dorukdumlu
+Kargo takip numaranız 7340 1129 58.	Kargo takip numaranız yedi üç dört sıfır, bir bir iki dokuz, beş sekiz. | Kargo takip numaranız yetmiş üç kırk, on bir yirmi dokuz, elli sekiz.	ids	bagimsiz-dorukdumlu
+Havale için hesap numaranız TR12 0006 4000 0011 2345 6789 01.	Havale için hesap numaranız TR bir iki, sıfır sıfır sıfır altı, dört sıfır sıfır sıfır, sıfır sıfır bir bir, iki üç dört beş, altı yedi sekiz dokuz, sıfır bir. | Havale için hesap numaranız te re bir iki, sıfır sıfır sıfır altı, dört sıfır sıfır sıfır, sıfır sıfır bir bir, iki üç dört beş, altı yedi sekiz dokuz, sıfır bir. | Havale için hesap numaranız te re on iki, sıfır sıfır sıfır altı, dört sıfır sıfır sıfır, sıfır sıfır bir bir, iki üç dört beş, altı yedi sekiz dokuz, sıfır bir. | Havale için hesap numaranız TR on iki, sıfır sıfır sıfır altı, dört sıfır sıfır sıfır, sıfır sıfır bir bir, iki üç dört beş, altı yedi sekiz dokuz, sıfır bir.	ids	bagimsiz-dorukdumlu
+Poliçe numaranız 2024-118734.	Poliçe numaranız iki bin yirmi dört, bir bir sekiz yedi üç dört. | Poliçe numaranız iki sıfır iki dört, bir bir sekiz yedi üç dört.	ids	bagimsiz-dorukdumlu
+Başvuru numaranız 20261114.	Başvuru numaranız iki sıfır iki altı bir bir bir dört.	ids	bagimsiz-dorukdumlu
+Müşteri numaranız 004512.	Müşteri numaranız sıfır sıfır dört beş bir iki.	ids	bagimsiz-dorukdumlu
+Randevunuz saat 14:45'te.	Randevunuz saat on dört kırk beşte.	time	bagimsiz-dorukdumlu
+Kurye saat 09:05'te kapınızda olacak.	Kurye saat dokuz sıfır beşte kapınızda olacak. | Kurye saat dokuzu beş geçe kapınızda olacak.	time	bagimsiz-dorukdumlu
+Sizi saat 14.45'te arayacağız.	Sizi saat on dört kırk beşte arayacağız.	time	bagimsiz-dorukdumlu
+Kurye perşembe 09:00-13:00 arası gelecek.	Kurye perşembe dokuz ile on üç arası gelecek. | Kurye perşembe dokuz on üç arası gelecek. | Kurye perşembe dokuzla on üç arası gelecek.	time	bagimsiz-dorukdumlu
+Şubemiz 09:00–17:30 saatleri arasında açık.	Şubemiz dokuz ile on yedi otuz saatleri arasında açık. | Şubemiz dokuz on yedi otuz saatleri arasında açık. | Şubemiz dokuz ile on yedi buçuk saatleri arasında açık.	time	bagimsiz-dorukdumlu
+Toplantı 16:30'da başlayacak.	Toplantı on altı otuzda başlayacak. | Toplantı on altı buçukta başlayacak.	time	bagimsiz-dorukdumlu
+Teslimat 14:00 ile 18:00 arasında yapılacak.	Teslimat on dört ile on sekiz arasında yapılacak.	time	bagimsiz-dorukdumlu
+Çağrı merkezimiz 08.30'da açılıyor.	Çağrı merkezimiz sekiz otuzda açılıyor. | Çağrı merkezimiz sekiz buçukta açılıyor.	time	bagimsiz-dorukdumlu
+Faiz oranı %3,49 olarak güncellendi.	Faiz oranı yüzde üç virgül kırk dokuz olarak güncellendi. | Faiz oranı yüzde üç virgül dört dokuz olarak güncellendi.	decimal	bagimsiz-dorukdumlu
+Faiz oranı %3.5 olarak güncellendi.	Faiz oranı yüzde üç virgül beş olarak güncellendi. | Faiz oranı yüzde üç buçuk olarak güncellendi. | Faiz oranı yüzde üç nokta beş olarak güncellendi.	decimal	bagimsiz-dorukdumlu
+Size %15 indirim tanımlandı.	Size yüzde on beş indirim tanımlandı.	decimal	bagimsiz-dorukdumlu
+Prim tutarınız 15% arttı.	Prim tutarınız yüzde on beş arttı.	decimal	bagimsiz-dorukdumlu
+Dolar kuru 34,75 seviyesinde.	Dolar kuru otuz dört virgül yetmiş beş seviyesinde. | Dolar kuru otuz dört virgül yedi beş seviyesinde.	decimal	bagimsiz-dorukdumlu
+Ortalama bekleme süresi 1.5 dakika.	Ortalama bekleme süresi bir virgül beş dakika. | Ortalama bekleme süresi bir buçuk dakika. | Ortalama bekleme süresi bir nokta beş dakika.	decimal	bagimsiz-dorukdumlu
+Komisyon oranı % 0,25.	Komisyon oranı yüzde sıfır virgül yirmi beş. | Komisyon oranı yüzde sıfır virgül iki beş.	decimal	bagimsiz-dorukdumlu
+Borcunuz 2.450,75 TL.	Borcunuz iki bin dört yüz elli lira yetmiş beş kuruş. | Borcunuz iki bin dört yüz elli virgül yetmiş beş lira.	money	bagimsiz-dorukdumlu
+Asgari ödeme tutarınız 1.000 TL.	Asgari ödeme tutarınız bin lira.	money	bagimsiz-dorukdumlu
+Hesabınıza ₺250 iade yapıldı.	Hesabınıza iki yüz elli lira iade yapıldı.	money	bagimsiz-dorukdumlu
+Yıllık aidat 10,00 TL.	Yıllık aidat on lira. | Yıllık aidat on virgül sıfır sıfır lira.	money	bagimsiz-dorukdumlu
+Toplam borcunuz 2450.75 TL.	Toplam borcunuz iki bin dört yüz elli lira yetmiş beş kuruş. | Toplam borcunuz iki bin dört yüz elli virgül yetmiş beş lira.	money	bagimsiz-dorukdumlu
+İşlem ücreti 0,50 TL.	İşlem ücreti elli kuruş. | İşlem ücreti sıfır virgül elli lira. | İşlem ücreti sıfır lira elli kuruş.	money	bagimsiz-dorukdumlu
+Taksit tutarı 349,90 TL.	Taksit tutarı üç yüz kırk dokuz lira doksan kuruş. | Taksit tutarı üç yüz kırk dokuz virgül doksan lira.	money	bagimsiz-dorukdumlu
+Ödemeniz 1250TL olarak alındı.	Ödemeniz bin iki yüz elli lira olarak alındı.	money	bagimsiz-dorukdumlu
+Kredinizin 3. taksiti gecikmiş görünüyor.	Kredinizin üçüncü taksiti gecikmiş görünüyor.	ordinal	bagimsiz-dorukdumlu
+Ofisimiz binanın 12. katında.	Ofisimiz binanın on ikinci katında.	ordinal	bagimsiz-dorukdumlu
+Bu ay sizi 2. kez arıyoruz.	Bu ay sizi ikinci kez arıyoruz.	ordinal	bagimsiz-dorukdumlu
+Başvurunuz 1. sırada bekliyor.	Başvurunuz birinci sırada bekliyor.	ordinal	bagimsiz-dorukdumlu
+Ödemenizi ayın 5'inde yapabilirsiniz.	Ödemenizi ayın beşinde yapabilirsiniz.	ordinal	bagimsiz-dorukdumlu
+Teşekkür ederiz, iyi günler!	Teşekkür ederiz, iyi günler. | Teşekkür ederiz, iyi günler!	symbols	bagimsiz-dorukdumlu
+Merhaba! Ben bankanızın sesli asistanıyım.	Merhaba. Ben bankanızın sesli asistanıyım. | Merhaba! Ben bankanızın sesli asistanıyım.	symbols	bagimsiz-dorukdumlu
+Kartınız (sonu 4821) kullanıma kapatıldı.	Kartınız, sonu dört sekiz iki bir, kullanıma kapatıldı. | Kartınız, sonu kırk sekiz yirmi bir, kullanıma kapatıldı. | Kartınız, sonu dört bin sekiz yüz yirmi bir, kullanıma kapatıldı. | Kartınız (sonu dört sekiz iki bir) kullanıma kapatıldı. | Kartınız (sonu kırk sekiz yirmi bir) kullanıma kapatıldı. | Kartınız (sonu dört bin sekiz yüz yirmi bir) kullanıma kapatıldı.	symbols	bagimsiz-dorukdumlu
+Lütfen “onaylıyorum” deyin.	Lütfen onaylıyorum deyin. | Lütfen “onaylıyorum” deyin.	symbols	bagimsiz-dorukdumlu
+Başvurunuz alındı; 3–5 iş günü içinde dönüş yapacağız.	Başvurunuz alındı; üç ile beş iş günü içinde dönüş yapacağız. | Başvurunuz alındı; üç beş iş günü içinde dönüş yapacağız.	symbols	bagimsiz-dorukdumlu
+Aylık ücret 49,90₺.	Aylık ücret kırk dokuz lira doksan kuruş. | Aylık ücret kırk dokuz virgül doksan lira.	symbols	bagimsiz-dorukdumlu
+Kurye 3 gün içinde gelecek.	Kurye üç gün içinde gelecek.	control	bagimsiz-dorukdumlu
+Şubemizde 1.250 kişi çalışıyor.	Şubemizde bin iki yüz elli kişi çalışıyor.	control	bagimsiz-dorukdumlu
+Ekstre kesim tarihiniz her ayın 15'i.	Ekstre kesim tarihiniz her ayın on beşi.	control	bagimsiz-dorukdumlu
+Kartınız kargoya verildi.	Kartınız kargoya verildi.	control	bagimsiz-dorukdumlu
+Size nasıl yardımcı olabilirim?	Size nasıl yardımcı olabilirim?	control	bagimsiz-dorukdumlu
+Limitiniz 1.250.000 TL olarak belirlendi.	Limitiniz bir milyon iki yüz elli bin lira olarak belirlendi.	control	bagimsiz-dorukdumlu
+Çağrı merkezimiz 444 0 333.	Çağrı merkezimiz dört yüz kırk dört, sıfır, üç yüz otuz üç. | Çağrı merkezimiz dört dört dört, sıfır, üç üç üç.	control	bagimsiz-dorukdumlu
+Kartınızın son dört hanesi 4821.	Kartınızın son dört hanesi dört sekiz iki bir. | Kartınızın son dört hanesi kırk sekiz yirmi bir. | Kartınızın son dört hanesi dört bin sekiz yüz yirmi bir.	control	bagimsiz-dorukdumlu
