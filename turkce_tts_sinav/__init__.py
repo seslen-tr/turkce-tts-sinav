@@ -140,23 +140,53 @@ def okunus_sinavi(sistem: Callable[[str], str], yaz: bool = True) -> dict:
     return sonuc
 
 
-def normalizasyon_sinavi(sistem: Callable[[str], str], yaz: bool = True) -> dict:
-    """sistem(metin) → okunuşa hazır metin. Ölçü: tam eşleşme (boşluk farkı yok sayılır) ve
-    sözcük hata oranı (WER)."""
+# normalizasyon.tsv: girdi, beklenen okunuş(lar), grup, kaynak. Beklenen sütununda birden çok doğru okunuş
+# OKUNUS_AYIRICI ile ayrılır; en yakını sayılır. Dördüncü sütun yoksa ya da boşsa kaynak VARSAYILAN_KAYNAK'tır.
+# Sonuç kaynağa göre de verilir: bir sistemin kendi testlerinden derlenmiş örnekler bağımsız bir ölçüm değildir.
+OKUNUS_AYIRICI = " | "
+VARSAYILAN_KAYNAK = "turkce-normalize-testleri"
+
+
+def _sozcukler(metin: str, gevsek: bool) -> list[str]:
+    """gevsek: büyük-küçük harf, noktalama ve kesme işareti yok sayılır ("Beş'te." = "beşte")."""
+    if not gevsek:
+        return metin.split()
+    return re.sub(r"[^\w\s]", " ", re.sub(r"['’]", "", kucuk(metin))).split()
+
+
+def _normalizasyon_olc(satirlar: list[list[str]], sistem: Callable[[str], str], gevsek: bool) -> dict:
     tam = hata = top = 0
     yanlis = []
-    for girdi, beklenen, grup in _satirlar("normalizasyon.tsv"):
+    kaynaklar: dict[str, dict] = {}
+    for p in satirlar:
+        girdi, beklenen = p[0], p[1]
+        kaynak = p[3] if len(p) > 3 and p[3] else VARSAYILAN_KAYNAK
         cikti = " ".join(sistem(girdi).split())
-        a, b = cikti.split(), beklenen.split()
-        h = _uzaklik(a, b)
+        a = _sozcukler(cikti, gevsek)
+        h, b = min(((_uzaklik(a, b), b) for b in
+                    (_sozcukler(o, gevsek) for o in beklenen.split(OKUNUS_AYIRICI))),
+                   key=lambda x: x[0])  # eşitlikte ilk okunuş
         hata += h
         top += len(b)
         tam += h == 0
+        k = kaynaklar.setdefault(kaynak, {"tam": 0, "ornek": 0})
+        k["tam"] += h == 0
+        k["ornek"] += 1
         if h:
             yanlis.append((girdi, cikti, beklenen))
-    n = len(_satirlar("normalizasyon.tsv"))
-    sonuc = {"tam": tam / n, "wer": hata / top, "ornek": n, "yanlislar": yanlis}
+    n = len(satirlar)
+    return {"tam": tam / n, "wer": hata / top, "ornek": n, "yanlislar": yanlis, "kaynaklar": kaynaklar}
+
+
+def normalizasyon_sinavi(sistem: Callable[[str], str], yaz: bool = True, gevsek: bool = False) -> dict:
+    """sistem(metin) → okunuşa hazır metin. Ölçü: tam eşleşme (boşluk farkı yok sayılır) ve
+    sözcük hata oranı (WER); birden çok doğru okunuş verilmişse en yakını. "kaynaklar": kaynak → doğru / toplam.
+    gevsek=True büyük-küçük harf, noktalama ve kesme işaretini yok sayar."""
+    sonuc = _normalizasyon_olc(_satirlar("normalizasyon.tsv"), sistem, gevsek)
     if yaz:
-        print("METİN HAZIRLAMA")
-        print(f"  tam eşleşme {tam} / {n}  %{100 * tam / n:.1f} · WER %{100 * hata / top:.2f}")
+        n, tam = sonuc["ornek"], sum(k["tam"] for k in sonuc["kaynaklar"].values())
+        print("METİN HAZIRLAMA" + (" (gevşek)" if gevsek else ""))
+        print(f"  tam eşleşme {tam} / {n}  %{100 * tam / n:.1f} · WER %{100 * sonuc['wer']:.2f}")
+        for kaynak, k in sonuc["kaynaklar"].items():
+            print(f"    {kaynak}: {k['tam']} / {k['ornek']}")
     return sonuc
