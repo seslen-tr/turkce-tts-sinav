@@ -1,6 +1,6 @@
 # turkce-tts-sinav
 
-> **English:** Open test data and evaluator for Turkish G2P, lexical stress and TTS text normalization: 174 stress examples from the linguistic literature, ~9,000 Wiktionary stress entries, ~11,000 Wiktionary IPA transcriptions and 145 normalization cases, with ready-made scorers.
+> **English:** Open test data and evaluator for Turkish G2P, lexical stress and TTS text normalization: 174 stress examples from the linguistic literature, ~9,000 Wiktionary stress entries, ~11,000 Wiktionary IPA transcriptions and 212 normalization cases (145 from turkce-normalize's tests, 67 independent banking and insurance lines), with ready-made scorers.
 
 Türkçe G2P, sözcük vurgusu ve ses sentezi ön uçlarını ölçmek için **açık sınav verisi ve
 değerlendirici**. Türkçe için bugüne kadar böyle ortak bir ölçüt yoktu. Sistemler ya hiç
@@ -48,7 +48,7 @@ sisteme büyük harfle başlayarak, küçük harfli hâli de `ozel_kok` olarak v
 | `vurgu_literatur.tsv` | Dilbilim literatüründe vurgusu verilmiş 174 sözcük ve çekimli biçim, her biri kaynağıyla. Tür etiketi: ek/kök kuralı (90), Sezer kuralı (33), sözlüksel (43), bağlamsız çözülemez (8) | Inkelas & Orgun 2003; Inkelas 1999; Göksel & Kerslake 2005; Sezer 1981; Woodard 2015; Yawney 2018 |
 | `vurgu_vikisozluk.tsv` | 9.030 sözcüğün vurgulu hecesi, **kesin / yumuşak** ayrımıyla | Vikisözlük (kaikki.org), CC BY-SA 4.0 |
 | `okunus_vikisozluk.tsv` | 11.108 sözcüğün sesbirimsel IPA'sı | Vikisözlük (kaikki.org), CC BY-SA 4.0 |
-| `normalizasyon.tsv` | 145 metin hazırlama örneği: sayı, tarih, saat, para, IBAN, telefon, kısaltma, Roma rakamı, kesir, aralık, e-posta, koordinat, birim, ekli sayı | [turkce-normalize](https://github.com/seslen-tr/turkce-normalize) testleri, MIT |
+| `normalizasyon.tsv` | 212 metin hazırlama örneği, iki kaynak. `turkce-normalize-testleri` (145): sayı, tarih, saat, para, IBAN, telefon, kısaltma, Roma rakamı, kesir, aralık, e-posta, koordinat, birim, ekli sayı. `bagimsiz-dorukdumlu` (67): banka ve sigorta müşterisine söylenen cümleler (tarih, baştaki sıfırlı kod, telefon, IBAN, takip ve poliçe numarası, saat, ondalık, para, sıra sayısı), her biri bütün doğru okunuşlarıyla | [turkce-normalize](https://github.com/seslen-tr/turkce-normalize) testleri, MIT; [tr-tts-norm-bench](https://github.com/dorukdumlu/tr-tts-norm-bench), bağımsız, MIT |
 
 Dosyalar paketle birlikte `turkce_tts_sinav/veri/` altında gelir.
 
@@ -77,9 +77,10 @@ kendiliğinden işaretler. Bu yüzden:
 | [turkce-vurgu](https://github.com/seslen-tr/turkce-vurgu) 0.1 | 120/123 (%97,6) | %97,2 ⚠ | %91,7 | %3,04 ⚠ |
 | hep son hece | 21/123 (%17,1) | %0 | %100 | — |
 
-**Metin hazırlama:** [turkce-normalize](https://github.com/seslen-tr/turkce-normalize) 0.1.7 → 145/145. ⚠ Örnekler onun
-testlerinden derlendiği için bu bağımsız bir ölçüm değildir; başka sistemlerin
-karşılaştırılması için konmuştur. Bağımsız örnek katkıları bu yüzden özellikle değerlidir.
+**Metin hazırlama:** [turkce-normalize](https://github.com/seslen-tr/turkce-normalize) 0.1.11 → toplam 199/212
+(gevşek 205/212): `turkce-normalize-testleri` 145/145, `bagimsiz-dorukdumlu` 54/67 (gevşek 60/67). ⚠ İlk kaynak onun
+testlerinden derlendiği için bağımsız bir ölçüm değildir; asıl karşılaştırma ikinci kaynaktadır. Bağımsız örnek
+katkıları bu yüzden özellikle değerlidir.
 
 ⚠ **Sızıntı:** turkce-vurgu'nun istisna ve okunuş sözlükleri Vikisözlük'ten türetildiği için
 bu sütunlar şişkin çıkar. Sözlükten bağımsız ölçümü (5 katlı çapraz doğrulama) turkce-vurgu'nun

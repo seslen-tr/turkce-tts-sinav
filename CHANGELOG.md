@@ -6,6 +6,9 @@
   satırlar olduğu gibi çalışır. Sonuç toplamın yanında kaynağa göre de verilir (`kaynaklar`).
 - Beklenen sütununda birden çok doğru okunuş (`" | "` ile); en yakını sayılır. Mevcut veride değişiklik yok.
 - `normalizasyon_sinavi(..., gevsek=True)`: büyük-küçük harf, noktalama ve kesme yok sayılır ("Beş'te." = "beşte").
+- Bağımsız ikinci kaynak `bagimsiz-dorukdumlu`: 67 banka ve sigorta cümlesi
+  ([tr-tts-norm-bench](https://github.com/dorukdumlu/tr-tts-norm-bench), MIT), birden çok doğru okunuşla
+  (145 → 212 örnek). turkce-normalize 0.1.11 bu kaynakta 54/67, gevşek 60/67.
 
 ## 0.1.2 — metin hazırlama verisi güncel
 
